@@ -1,0 +1,878 @@
+/* google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* variable  declaration */
+:root{
+    --primary: #e52165;
+    --primary-light: #e521668a;
+    --secondary: #0d1137;
+    --secondary-light: #0d1137be;
+ }
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----------------------Header--------------------------------------------------------- */
+#header-content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 2rem;
+    background-color: var(--secondary);
+    height:12vh;
+    
+}
+
+.header-list-content{
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type:none; 
+    
+}
+
+.header-list-content li a{
+    text-decoration: none;
+    color:white;
+}
+
+
+#logo{
+    height: 80px;
+}
+
+#logo img{
+    width:100%;
+    height:100%;
+   }
+
+header{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.199),rgba(0, 0, 0, 0.479)), url("college4.jpg");
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+
+.header-list-content li::after{
+    content:"";
+    display: block;
+    width:100%;
+    background-color: var(--primary);
+    height:2px;
+    transform:scaleX(0);
+    transition:transform 300ms;
+}
+
+.header-list-content li:hover::after{
+    transform:scaleX(1);
+}
+
+
+::selection{
+    color:var(--secondary);
+    background-color: var(--primary);
+}
+
+.fa-bars{
+    color:white;
+}
+
+#burger{
+    display: none;
+    cursor:pointer;
+}
+
+.header-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align: center;
+}
+
+#college{
+    margin:1.2rem 0;
+}
+
+.header-text a{
+    color:white;
+    background-color: var(--primary);
+    text-decoration: none;
+    padding:0.5rem 0.3rem;
+    display: inline-block;
+    transition:300ms;
+}
+
+.header-text a:hover{
+     transform:translateY(5px);
+}
+/* ----------------------Header End ----------------------------------------------------------------- */
+
+/* ----------------------quora start ----------------------------------------------------------------- */
+.quora{
+    text-align: center;
+    margin-top:5rem;
+    margin-bottom:3rem;
+}
+.vmw{
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+    display:flex;
+    
+    }
+.same{
+    background-color: var(--primary);
+    color:white;
+    text-align: center;
+    margin-left:10px;
+    padding:1rem 1rem;
+}
+
+.same:first-child{
+    margin-left:0;
+}
+
+.same:hover{
+    box-shadow: 5px 6px 2px 1px black;
+}
+
+/* ----------------------quora end ----------------------------------------------------------------- */
+
+/* ---------------------- Our Courses start---------------------------------------------- */
+
+.our-course{
+    text-align: center;
+    margin-top:5rem;
+    margin-bottom: 2.5rem;
+}
+
+.whole-department{
+    width : 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 0.5rem;
+        
+}
+
+.image{
+    position:relative;
+}
+
+.image img{
+    width:100%;
+    display:block;
+}
+
+.image::after{
+    position:absolute;
+    content:"";
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    
+    transform:translate(-50%,-50%);
+    transform: scale(0);
+    transition:transform 2s;
+    
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.whole:hover .image::after{
+    transform:scale(1);
+    
+}
+
+.whole{
+    position: relative;
+}
+
+.content{
+    position:absolute;
+    content:"";
+    top:80%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    opacity:0;
+    color:white;
+    text-align: center;
+
+    transition:opacity 400ms , top 900ms;
+
+}
+
+
+.whole:hover .content{
+    top:50%;
+    opacity:1;
+    
+}
+
+
+/* ---------------------- Our Courses end---------------------------------------------- */
+
+/* ---------------------- Our Facilities Start---------------------------------------------- */
+
+.our-facility{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.overall-facility{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.facility-image img{
+    width:100%;
+    display: block;
+}
+
+.overall-facility{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.facility{
+    position: relative;
+    background-color: #e52165;
+    margin-bottom: 0.8rem;
+}
+
+.facility-contant{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align: center;
+    z-index: -1;
+    transition: z-index 100ms;
+ }
+
+.facility:hover .facility-contant{
+    z-index: 1;
+    transition: z-index 1.2s;
+}
+
+.facility-image{
+    position:relative;
+    left:1.5rem;
+    padding:20px 0;
+    transition: left 800ms,opacity 700ms;
+}
+
+
+.facility:hover .facility-image {
+    
+    left:25rem;
+    transition: left 500ms;
+}
+
+.facility:hover .facility-image img{
+    box-shadow: 10px 20px 30px 1px;
+}
+
+/* ---------------------- Our Facilities End---------------------------------------------- */
+
+/* ---------------------- Footer Start---------------------------------------------- */
+
+.footer-all{
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--secondary);
+    color:white;
+    padding:1rem 0;
+}
+
+.footer-list-content{
+    list-style-type: none;
+    
+}
+
+.footer-list-content a{
+    text-decoration: none;
+    color:white;
+}
+
+.copyright-all{
+    text-align: center;
+    background-color: var(--secondary-light);
+    padding: 0.6rem 0;
+    color:white;
+}
+
+/* ---------------------- Footer end---------------------------------------------- */
+
+/* ---------------------- about-us start ---------------------------------------------- */
+
+.about-us{
+    margin-top:5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.about-content{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.about-para{
+    text-align: justify;
+    padding:0 1rem;
+}
+
+
+
+.our-student-full{
+    background-color: var(--secondary-light);
+    margin-top: 5rem;
+}
+
+.student{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.student-heading{
+    text-align: center;
+    padding-top:3rem;
+    padding-bottom: 3rem;
+    color: white;
+   
+}
+
+.student-image img{
+    width:100%;
+}
+
+.student-content{
+    width:100%;
+    padding:2rem;
+    line-height: 2rem;
+    color:white;
+}
+
+.student{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.student:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.student-total{
+    padding-bottom:0.1rem;
+}
+
+
+
+.our-student-register-total{
+      background-color: var(--primary-light);
+}
+
+.our-student-register-outer-total{
+    margin-top: 5rem;
+    
+}
+
+.our-student-register-now{
+    text-align: center;
+    color: var(--secondary);
+    padding-top:3rem;
+    padding-bottom: 2rem;
+}
+
+.our-student-register-content{
+    text-align: center;
+    color:black;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.our-student-register-button{
+    text-align: center;
+    padding-bottom: 2rem;
+    
+}
+
+
+.our-student-register-button a{
+    text-decoration: none;
+    background-color: var(--primary);
+    color:white;
+    padding:0.5rem 0.5rem;
+    display: inline-block;
+    transition:transform 300ms;
+    
+}
+
+.our-student-register-button a:hover{
+    transform:translateY(5px);
+}
+
+/* ---------------------- about-us end ---------------------------------------------- */
+/* ---------------------- Course Table start ---------------------------------------------- */
+.cocn-section{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    background-color: var(--primary-light);
+    padding-top:1rem;
+    padding-bottom: 2rem;
+}
+
+.cocn-heading{
+    text-align: center;
+    padding-top:2rem;
+    padding-bottom: 1.5rem;
+}
+
+.cocn-table-total{
+     width:60%;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+
+}
+
+.cocn-table{
+    width:100%;
+ }
+
+ .cocn-table tr th,.cocn-table tr td{
+     padding: 1rem;
+ }
+
+ .cocn-table{
+     border-collapse: collapse;
+ }
+
+ .cocn-table tr th{
+     color:var(--secondary);
+     background-color: white;
+ }
+
+ .cocn-table tr:nth-child(even) {
+     color:white;
+     background-color: var(--primary);
+ }
+
+ .cocn-table tr:nth-child(odd) {
+    color:white;
+    background-color: var(--secondary);
+}
+ .cocn-table tr td a{
+      text-decoration: none;
+      color: white;
+      background-color: green;
+      padding:0.5rem;
+ }
+ 
+ .cocn-table tr{
+     transition: transform 300ms;
+ }
+ .cocn-table tr:not(:first-child):hover{
+     transform:scale(1.01);
+ }
+ 
+ .cocn-table {
+     filter:drop-shadow(-20px -10px 20px )
+ }
+
+/* ---------------------- Course Table end ---------------------------------------------- */
+
+/* ---------Information Center Start ----------------------------*/
+
+
+.information-section{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.information-heading{
+    text-align: center;
+    padding-top:5rem;
+    padding-bottom: 2.5rem;
+}
+
+.information-total{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-row-gap: 1.5rem;
+}
+
+.information p i{
+    color:var(--primary);
+    padding-right:10px;
+}
+.information{
+    transition:transform 200ms;
+   /* text-shadow: 2px 2px 20px; */
+}
+.information:hover{
+    transform:translate(5px,-5px);
+}
+
+/* ---------Information Center End ----------------------------*/
+/* ---------Contact Start ----------------------------*/
+
+.map{
+    width:80%;
+    margin-left:auto ;
+    margin-right: auto;
+    
+    
+}
+
+.map-section{
+    background-color: var(--secondary-light);
+    padding-top:3rem;
+    padding-bottom: 3rem;
+    margin:2.5rem 0;
+
+}
+
+.map-location{
+    text-align:center;
+    padding-bottom:2rem;
+    color:white;
+}
+
+
+.form-total{
+   width:35%;
+   margin:auto;
+   background:linear-gradient(to right,rgba(0, 0, 255, 0.322),rgba(241, 8, 47, 0.342)) ;
+   z-index: -1;
+}
+
+.register-total{
+    text-align: center;
+    padding-bottom:2rem;
+    padding-top:3rem;
+    color:white;
+}
+
+.label-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.form-action label,.form-action input,.form-action select,.form-action textarea{
+  width:100%;
+  margin:1rem;
+  
+}
+
+.form-action{
+    padding:2rem;
+} 
+
+
+.register-full{
+    background: linear-gradient(to right,rgba(0, 0, 255, 0.336),rgba(255, 0, 0, 0.363));
+    padding-bottom: 2rem;
+    margin-top:2.5rem;
+}
+
+.label-input button{
+    color:white;
+    background-color: var(--primary-light);
+    padding:0.5rem;
+}
+
+.label-input label{
+    opacity:0.8;
+    color:white;
+}
+
+.label-input input{
+    border:none;
+    outline:none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+.label-input select{
+    opacity: 0.7;
+    border:none;
+    outline: none;
+    background: transparent ;
+    border:1px solid white; 
+}
+
+.label-input textarea{
+    opacity: 0.7;
+    border:none;
+    outline: none;
+    background: transparent ;
+    border:1px solid white; 
+    color:white;
+}
+
+.label-input button{
+    opacity: 0.7;
+    border:none;
+    outline: none;
+    background: transparent ;
+    border:1px solid white; 
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.label-input button:hover{
+    transform:translateY(5px);
+}
+
+/* ---------Contact End ----------------------------*/
+
+
+
+
+
+/*-------  Media Query  --------------------------------------------------------------------------------*/
+
+/* -----Header Media Query ---------------------------------- */
+@media screen and (max-width:846px){
+    .header-text{
+        width:100%;
+        
+      }
+}
+
+@media screen and (max-width:600px) {
+    .header-list-content {
+       flex-direction: column;
+       background-color: var(--secondary-light);
+       position:absolute;
+       right:0;
+       visibility: hidden;
+       top:12vh;
+       width:0;
+       height:50vh;
+       padding: 1.5rem 0;
+       transition:all 300ms;
+    }
+
+    #burger{
+        display:block;
+    }
+
+    .list-container{
+        visibility: visible;
+        width:100%;
+    }
+
+    .text-container{
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width:500px){
+    .header-text h1{
+        font-size:1.3rem;
+      }
+}
+
+/* -----Header Media Query End -------------------------------------------------- */
+
+/* -----quora Media Query Start -------------------------------------------------- */
+
+@media screen and (max-width:878px) {
+    .vmw{
+        flex-direction: column;
+        margin-left:auto;
+        margin-right: auto;
+      }
+
+    .same{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+   
+    .same:first-child{
+        margin-top: 0;
+    }
+}
+
+/* -----quora Media Query end -------------------------------------------------- */
+
+/* -----our facilities Media query start -------------------------------------------------- */
+@media screen and (max-width:1030px){
+    .facility:hover .facility-image {
+        opacity:0;
+        left:25rem;
+        transition: left 500ms,opacity 700ms;
+    }   
+}
+
+/* -----our facilities Media query end -------------------------------------------------- */
+
+
+/* -----Footer Media Query Start ---------------------------------- */
+
+@media screen and (max-width:800px) {
+    .footer-all{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-list-content {
+        margin:1rem 0;
+    }
+}
+
+@media screen and (max-width:415px){
+    .footer-all{
+        font-size: small;
+        
+    }
+}
+
+/* -----Footer Media Query end ---------------------------------- */
+
+/* -----ABOUT US Media Query start ---------------------------------- */
+
+@media screen and (max-width:720px){
+    .about-para{
+        
+        
+        font-size:15px;
+    }
+}
+@media screen and (max-width:449px){
+    .about-para{
+        text-align: left;
+        
+        font-size:15px;
+    }
+}
+
+/* -----Our student Media Query Start ---------- */
+
+@media screen and (max-width:1200px) {
+    .student-content{
+        font-size:small;
+    }
+}
+
+@media screen and (max-width:1160px) {
+    .student{
+        flex-direction: column;
+    }
+    
+    .student:nth-child(even){
+        flex-direction: column;
+    }
+
+    .student-content{
+        font-size: large;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .student-content{
+      font-size: small;
+     }
+}
+
+@media screen and (max-width:430px) {
+    .student-content{
+        font-size: 13px;
+        line-height: 20px;
+     }
+}
+
+
+/* -----Our student media query end ------ */
+/* -----ABOUT US Media Query End ---------------------------------- */
+
+
+/* ---Check our courses now Media query start----------------------- */
+@media screen and (max-width:460px) {
+    .cocn-table-total{
+       text-align: center;
+      }
+      .cocn-table tr td,.cocn-table tr th{
+          padding:0.2rem;
+      }
+
+      .cocn-table tr td a{
+          padding:0rem;
+      }
+
+      .cocn-heading{
+          font-size:small;
+      }
+      
+}
+
+/* ---Check our courses now Media query End----------------------- */
+
+/* ---Information center Media query Start----------------------- */
+@media screen and (max-width:450px) {
+    .information-heading{
+        font-size: small;
+    } 
+}
+
+/* ---Information center Media query End----------------------- */
+
+/*----------------- register form media query start----------------------*/
+
+@media screen and (max-width:1290px){
+    .label-input{
+        flex-direction: column;
+    }
+    .form-action label,.form-action input,.form-action select,.form-action textarea{
+     margin: 0.3rem;
+    }
+}
+
+@media screen and (max-width:1290px){
+    .form-total{
+        width:50%;
+ }
+}
+
+@media screen and (max-width:500px) {
+    .form-total{
+        width:60%;
+}
+}
+/*----------------- register form media query end----------------------*/
